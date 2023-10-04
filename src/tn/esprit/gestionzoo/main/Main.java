@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.main;
+import tn.esprit.gestionzoo.entities.*;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -9,10 +11,8 @@ public class Main {
         Animal tiger = new Animal("Felidae", "Tiger", 6, true);
         Animal panda = new Animal("Ursidae", "Panda", 8, true);
         Animal crocodile = new Animal("Crocodylidae", "Crocodile", 15, false);
-        System.out.println(lion.isMammal);
-        System.out.println(lion.name);
 
-        Zoo myZoo = new Zoo("My Zoo", "My City", 25);
+        Zoo myZoo = new Zoo("My tn.esprit.gestionzoo.entities.Zoo", "My City", 25);
         Zoo myZoooo = new Zoo("My Zoo2", "My City2", 25);
         myZoo.displayZoo();
         System.out.println("----------------------------");

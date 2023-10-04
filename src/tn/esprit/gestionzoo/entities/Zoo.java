@@ -1,29 +1,48 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Zoo {
-    Animal [] animals;
-    String name;
-    String city;
-    final int nbrCages=25;
+    private Animal[] animals;
+    private String name;
+    private String city;
+    static int nbrCages=25;
 
     public Zoo(String name, String city, int nbrCages) {
         animals = new Animal[nbrCages];
-        this.name = name;
-        this.city = city;
+        setName(name);
+        setCity(city);
 
     }
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        if (name.isEmpty()) {
+            System.out.println("Name cannot be empty .");
+        } else {
+            this.name = name;
+        }
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city=city;
+    }
     public void displayZoo() {
-        System.out.println("Zoo Name: " + name);
+        System.out.println("tn.esprit.gestionzoo.entities.Zoo Name: " + name);
         System.out.println("City: " + city);
         System.out.println("Number of Cages: " + nbrCages);
     }
 
     @Override
     public String toString() {
-        return "Zoo Name: " + name + "\nCity: " + city + "\nNumber of Cages: " + nbrCages;
+        return "tn.esprit.gestionzoo.entities.Zoo Name: " + name + "\nCity: " + city + "\nNumber of Cages: " + nbrCages;
     }
     public boolean addAnimal(Animal animal) {
+        if (isZooFull()) {
+            System.out.println("The zoo is full.");
+            return false;
+        }
         int index = 0;
           while (index < animals.length && animals[index] != null) {
             index++;
@@ -39,7 +58,7 @@ public class Zoo {
     public void displayAnimals() {
         for (int i = 0; i < animals.length; i++) {
             if (animals[i] != null) {
-                System.out.println("Animal " + (i + 1) + ":");
+                System.out.println("tn.esprit.gestionzoo.entities.Animal " + (i + 1) + ":");
                 System.out.println("Name: " + animals[i].getName());
                 System.out.println("Family: " + animals[i].getFamily());
                 System.out.println("Age: " + animals[i].getAge());
