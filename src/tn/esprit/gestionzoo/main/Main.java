@@ -12,7 +12,7 @@ public class Main {
         Animal panda = new Animal("Ursidae", "Panda", 8, true);
         Animal crocodile = new Animal("Crocodylidae", "Crocodile", 15, false);
 
-        Zoo myZoo = new Zoo("My tn.esprit.gestionzoo.entities.Zoo", "My City", 25);
+        Zoo myZoo = new Zoo("My Zoo", "My City", 25);
         Zoo myZoooo = new Zoo("My Zoo2", "My City2", 25);
         myZoo.displayZoo();
         System.out.println("----------------------------");
